@@ -1,0 +1,571 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #7c3aed;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 22px;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.hamburger {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        flex-direction: column;
+        background: #7c3aed;
+        width: 100%;
+        padding: 20px;
+        transform: translateY(-200%);
+        transition: transform 0.3s;
+    }
+
+    .menu.aberto {
+        transform: translateY(0);
+    }
+}   
+
+.hero-form {
+    background: linear-gradient(135deg, #1e1b4b, #7c3aed);
+    padding: 60px 20px;
+    display: flex; justify-content: center;
+}
+.hero-form-caixa {
+    background: white;
+    padding: 34px 30px;
+    border-radius: 16px;
+    max-width: 440px;
+    width: 100%;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+.hero-form-caixa h1 { color: #1e293b; font-size: 1.5rem; margin-bottom: 8px; }
+.hero-form-caixa p { color: #64748b; font-size: 0.9rem; margin-bottom: 20px; }
+.hero-form-caixa input {
+    width: 100%; padding: 12px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px; margin-bottom: 10px;
+    font-size: 0.9rem; font-family: inherit;
+}
+.hero-form-caixa input:focus { outline: none; border-color: #a855f7; }
+.hero-form-caixa button {
+    width: 100%; padding: 13px;
+    background: #a855f7; color: white;
+    border: none; border-radius: 10px;
+    font-weight: 800; cursor: pointer;
+    font-family: inherit;
+}
+.hero-form-caixa button:hover { background: #9333ea; }
+
+.boas-vindas {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 50px 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.bv-texto { flex: 1; min-width: 260px; }
+.bv-tag {
+    background: #ede9fe; color: #7c3aed;
+    padding: 5px 14px; border-radius: 20px;
+    font-size: 0.7rem; font-weight: 800;
+    letter-spacing: 1px;
+}
+.bv-texto h1 { font-size: 1.9rem; color: #1e293b; margin: 12px 0; }
+.bv-texto p { color: #64748b; font-size: 0.95rem; margin-bottom: 20px; }
+.btn-primario {
+    padding: 12px 24px; background: #a855f7; color: white;
+    border: none; border-radius: 10px;
+    font-weight: 700; cursor: pointer;
+}
+.bv-imagem { flex: 1; min-width: 260px; }
+.bv-imagem img {
+    width: 100%; border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.sobre {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 50px 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap-reverse;
+}
+.sobre-imagem { flex: 1; min-width: 260px; }
+.sobre-imagem img { width: 100%; border-radius: 16px; }
+.sobre-texto { flex: 1; min-width: 260px; }
+.sobre-tag {
+    background: #fce7f3; color: #be185d;
+    padding: 5px 14px; border-radius: 20px;
+    font-size: 0.7rem; font-weight: 800;
+    letter-spacing: 1px;
+}
+.sobre-texto h2 { color: #1e293b; margin: 12px 0; font-size: 1.6rem; }
+.sobre-texto p { color: #64748b; margin-bottom: 16px; font-size: 0.95rem; }
+.sobre-lista { list-style: none; padding: 0; }
+.sobre-lista li {
+    padding: 6px 0;
+    color: #334155; font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.beneficios { padding: 50px 20px; text-align: center; }
+.beneficios h2 { color: #1e293b; font-size: 1.7rem; margin-bottom: 6px; }
+.subtitulo { color: #64748b; margin-bottom: 30px; }
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.beneficio {
+    background: white;
+    padding: 26px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    transition: 0.2s;
+}
+.beneficio:hover { border-color: #a855f7; transform: translateY(-4px); }
+.beneficio-icone { font-size: 2rem; margin-bottom: 12px; }
+.beneficio h3 { color: #1e293b; margin-bottom: 6px; }
+.beneficio p { color: #64748b; font-size: 0.88rem; }
+
+.produtos { padding: 50px 20px; text-align: center; }
+.produtos h2 { color: #1e293b; font-size: 1.7rem; margin-bottom: 30px; }
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.produto {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.2s;
+    padding-bottom: 18px;
+}
+.produto:hover { border-color: #a855f7; transform: translateY(-4px); }
+.produto img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+.produto h3 { color: #1e293b; font-size: 1rem; margin: 14px 0 4px; }
+.preco { color: #7c3aed; font-weight: 800; font-size: 1.1rem; margin-bottom: 12px; }
+.btn-comprar {
+    padding: 8px 20px;
+    background: #a855f7; color: white;
+    border: none; border-radius: 20px;
+    font-weight: 700; cursor: pointer;
+    font-size: 0.85rem;
+}
+.btn-comprar:hover { background: #9333ea; }
+
+/* ================================
+   PAGAMENTO - BRASA BURGER
+================================ */
+
+.pagamento {
+    padding: 80px 20px;
+    background: #fff7ed;
+    text-align: center;
+}
+
+.pagamento h2 {
+    font-size: 34px;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.pagamento .subtitulo {
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+.pagamento-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.forma-pagamento {
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.forma-pagamento:hover {
+    transform: translateY(-8px);
+    border-color: #f97316;
+    box-shadow: 0 15px 35px rgba(249, 115, 22, 0.18);
+}
+
+.pagamento-icone {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #fff1e6;
+
+    font-size: 38px;
+}
+
+.forma-pagamento h3 {
+    font-size: 24px;
+    color: #1f2937;
+    margin-bottom: 12px;
+}
+
+.forma-pagamento p {
+    color: #6b7280;
+    line-height: 1.6;
+    min-height: 50px;
+}
+
+.btn-pagamento {
+    margin-top: 20px;
+
+    width: 100%;
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #ea580c;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-pagamento:hover {
+    background: #c2410c;
+    transform: scale(1.03);
+}
+
+
+/* CORES DIFERENTES PARA CADA PAGAMENTO */
+
+.forma-pagamento:nth-child(1) .pagamento-icone {
+    background: #dcfce7;
+}
+
+.forma-pagamento:nth-child(1) .btn-pagamento {
+    background: #16a34a;
+}
+
+.forma-pagamento:nth-child(1) .btn-pagamento:hover {
+    background: #15803d;
+}
+
+
+.forma-pagamento:nth-child(2) .pagamento-icone {
+    background: #dbeafe;
+}
+
+.forma-pagamento:nth-child(2) .btn-pagamento {
+    background: #2563eb;
+}
+
+.forma-pagamento:nth-child(2) .btn-pagamento:hover {
+    background: #1d4ed8;
+}
+
+
+.forma-pagamento:nth-child(3) .pagamento-icone {
+    background: #fef3c7;
+}
+
+.forma-pagamento:nth-child(3) .btn-pagamento {
+    background: #d97706;
+}
+
+.forma-pagamento:nth-child(3) .btn-pagamento:hover {
+    background: #b45309;
+}
+
+
+/* RESPONSIVO PARA CELULAR */
+
+@media (max-width: 768px) {
+
+    .pagamento {
+        padding: 60px 20px;
+    }
+
+    .pagamento h2 {
+        font-size: 28px;
+    }
+
+    .pagamento-container {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .forma-pagamento {
+        padding: 30px 20px;
+    }
+
+}
+/* =================================
+   CARDÁPIO - BRASA BURGER
+================================= */
+
+.produtos {
+    position: relative;
+    padding: 90px 20px;
+    text-align: center;
+
+    /* Fundo escuro da seção */
+    background:
+        linear-gradient(
+            rgba(25, 12, 5, 0.94),
+            rgba(45, 18, 5, 0.96)
+        ),
+        url("https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Título */
+
+.produtos h2 {
+    color: #ffffff;
+    font-size: 38px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.produtos .subtitulo {
+    color: #fed7aa;
+    font-size: 17px;
+    margin-bottom: 45px;
+}
+
+
+/* GRID DOS PRODUTOS */
+
+.produtos-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+/* CARD */
+
+.produto {
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    padding-bottom: 22px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    transition: all 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+
+/* IMAGEM */
+
+.produto img {
+    width: 100%;
+    height: 210px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.produto:hover img {
+    transform: scale(1.06);
+}
+
+
+/* NOME */
+
+.produto h3 {
+    color: #1f2937;
+
+    font-size: 21px;
+
+    margin: 20px 15px 8px;
+}
+
+
+/* DESCRIÇÃO */
+
+.produto p:not(.preco) {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin: 0 18px 15px;
+
+    min-height: 45px;
+}
+
+
+/* PREÇO */
+
+.produto .preco {
+    color: #ea580c;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    margin: 15px 0;
+}
+
+
+/* BOTÃO */
+
+.btn-comprar {
+    border: none;
+
+    background: #ea580c;
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background: #c2410c;
+
+    transform: scale(1.05);
+}
+
+
+/* DETALHE DECORATIVO */
+
+.produtos::before {
+    content: "🍔";
+
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1000px) {
+
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =================================
+   CELULAR
+================================= */
+
+@media (max-width: 600px) {
+
+    .produtos {
+        padding: 60px 15px;
+
+        background-attachment: scroll;
+    }
+
+    .produtos h2 {
+        font-size: 30px;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .produto img {
+        height: 230px;
+    }
+
+}

@@ -1,45 +1,547 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <style>
+    <title>Brasa Burger</title>
 
-.hero-img {
-    min-height: 380px;
-    background-image: url('https://picsum.photos/id/1015/1200/600');
-    background-size: cover;
-    background-position: center;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 16px; margin: 20px; overflow: hidden;
-}
-.overlay {
-    background: rgba(0,0,0,0.55);
-    color: white; padding: 40px 24px; text-align: center;
-    width: 100%; height: 100%;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-}
-.overlay h1 { font-size: 2rem; margin-bottom: 12px; }
-.overlay p { font-size: 1rem; opacity: 0.9; margin-bottom: 22px; }
-.btn-cta { padding: 12px 28px; background: #a855f7; color: white; border: none; border-radius: 30px; font-weight: 800; cursor: pointer; }
-
-
-    </style>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
 
-<section class="hero-img">
-    <div class="overlay">
-        <h1>Descubra novas experiências</h1>
-        <p>Os melhores destinos para sua próxima viagem</p>
-        <button class="btn-cta">Explorar</button>
+    <!-- MENU -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🍔 Brasa Burger
+        </div>
+
+        <button class="hamburger" onclick="toggleNav()">
+            ☰
+        </button>
+
+        <ul class="menu" id="menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">SOBRE A BRASA BURGER</a></li>
+            <li><a href="#">Cardapio</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- APRESENTAÇÃO -->
+    <div style="padding: 80px 20px; text-align: center;">
+
+        <h1>
+            O sabor que dá água na boca! 🍔🔥
+        </h1>
+
+        <p style="color:#64748b;">
+            Hambúrguer artesanal feito na brasa e preparado especialmente para você.
+        </p>
+
     </div>
-</section>
 
-</script>
+
+    <!-- PROMOÇÃO -->
+    <section class="hero-form">
+
+        <div class="hero-form-caixa">
+
+            <h1>
+                Ganhe 10% de desconto! 🔥
+            </h1>
+
+            <p>
+                Cadastre-se e receba nossas promoções e novidades em primeira mão.
+            </p>
+
+            <form onsubmit="event.preventDefault(); alert('Cadastro realizado!');">
+
+                <input type="text" placeholder="Seu nome" required>
+
+                <input type="email" placeholder="seu@email.com" required>
+
+                <button type="submit">
+                    QUERO MEU DESCONTO
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <div class="sobre-texto">
+
+        <span class="sobre-tag">
+            SOBRE A BRASA BURGER
+        </span>
+
+        <h2>
+            O sabor da brasa em cada mordida 🍔🔥
+        </h2>
+
+        <p>
+            Na Brasa Burger, preparamos hambúrgueres artesanais com
+            ingredientes selecionados, carne suculenta e muito sabor.
+            Nosso objetivo é oferecer uma experiência deliciosa em
+            cada pedido.
+        </p>
+
+        <ul class="sobre-lista">
+
+            <li>✅ Hambúrguer artesanal</li>
+            <li>✅ Ingredientes selecionados</li>
+            <li>✅ Preparado na hora</li>
+
+        </ul>
+
+    </div>
+
+    <!-- BOAS-VINDAS -->
+    <section class="boas-vindas">
+
+        <div class="bv-texto">
+
+            <span class="bv-tag">
+                BEM-VINDO À BRASA BURGER
+            </span>
+
+            <h1>
+                Hambúrguer artesanal feito para você! 🍔🔥
+            </h1>
+
+            <p>
+                Pão macio, carne suculenta, queijo derretido e ingredientes
+                selecionados. Tudo preparado na hora para deixar seu pedido
+                ainda mais especial.
+            </p>
+
+            <button class="btn-primario">
+                Ver nosso cardápio
+            </button>
+
+        </div>
+
+        <div class="bv-imagem">
+
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80"
+                alt="Hambúrguer artesanal">
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE NÓS -->
+    <section class="sobre">
+
+        <div class="sobre-imagem">
+
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=500&q=80"
+                alt="Hambúrguer artesanal da Brasa Burger">
+
+        </div>
+
+
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="beneficios">
+
+        <h2>
+            Por que escolher a Brasa Burger?
+        </h2>
+
+        <p class="subtitulo">
+            Tudo feito para deixar seu hambúrguer ainda mais especial 🍔
+        </p>
+
+        <div class="beneficios-grid">
+
+
+            <div class="beneficio">
+
+                <div class="beneficio-icone">
+                    🍔
+                </div>
+
+                <h3>
+                    Artesanal
+                </h3>
+
+                <p>
+                    Hambúrgueres preparados com muito sabor e cuidado.
+                </p>
+
+            </div>
+
+
+            <div class="beneficio">
+
+                <div class="beneficio-icone">
+                    🔥
+                </div>
+
+                <h3>
+                    Na Brasa
+                </h3>
+
+                <p>
+                    Carne suculenta e preparada na hora para você.
+                </p>
+
+            </div>
+
+
+            <div class="beneficio">
+
+                <div class="beneficio-icone">
+                    🧀
+                </div>
+
+                <h3>
+                    Ingredientes
+                </h3>
+
+                <p>
+                    Produtos selecionados para garantir qualidade
+                    em cada mordida.
+                </p>
+
+            </div>
+
+
+            <div class="beneficio">
+
+                <div class="beneficio-icone">
+                    🚀
+                </div>
+
+                <h3>
+                    Entrega Rápida
+                </h3>
+
+                <p>
+                    Seu pedido chega quentinho e pronto para matar a fome.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section class="produtos">
+
+        <h2>
+            🍔 Nosso Cardápio
+        </h2>
+
+        <p class="subtitulo">
+            Escolha seu favorito e aproveite o sabor da Brasa Burger!
+        </p>
+
+
+        <div class="produtos-grid">
+
+
+            <!-- PRODUTO 1 -->
+            <div class="produto">
+
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80"
+                    alt="Brasa Clássico">
+
+                <h3>
+                    Brasa Clássico
+                </h3>
+
+                <p>
+                    Carne artesanal, queijo, alface, tomate e molho especial.
+                </p>
+
+                <p class="preco">
+                    R$ 24,90
+                </p>
+
+                <button class="btn-comprar">
+                    Pedir agora
+                </button>
+
+            </div>
+
+
+            <!-- PRODUTO 2 -->
+            <div class="produto">
+
+                <img src="data:image/jpeg;base64,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"
+                    alt="Cheese Bacon">
+
+                <h3>
+                    Cheese Bacon
+                </h3>
+
+                <p>
+                    Carne artesanal, queijo, bacon crocante e molho da casa.
+                </p>
+
+                <p class="preco">
+                    R$ 29,90
+                </p>
+
+                <button class="btn-comprar">
+                    Pedir agora
+                </button>
+
+            </div>
+
+
+            <!-- PRODUTO 3 -->
+            <div class="produto">
+
+                <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=300&q=80"
+                    alt="Brasa Especial">
+
+                <h3>
+                    Brasa Especial
+                </h3>
+
+                <p>
+                    Carne artesanal, queijo, bacon, cebola caramelizada
+                    e molho especial.
+                </p>
+
+                <p class="preco">
+                    R$ 34,90
+                </p>
+
+                <button class="btn-comprar">
+                    Pedir agora
+                </button>
+
+            </div>
+
+
+            <!-- PRODUTO 4 -->
+            <div class="produto">
+
+                <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=300&q=80"
+                    alt="Duplo Bacon">
+
+                <h3>
+                    Duplo Bacon
+                </h3>
+
+                <p>
+                    Dois hambúrgueres artesanais, queijo duplo
+                    e bacon crocante.
+                </p>
+
+                <p class="preco">
+                    R$ 39,90
+                </p>
+
+                <button class="btn-comprar">
+                    Pedir agora
+                </button>
+
+            </div>
+
+
+            <!-- PRODUTO 5 -->
+            <div class="produto">
+
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=300&q=80"
+                    alt="Batata Frita">
+
+                <h3>
+                    Batata da Brasa
+                </h3>
+
+                <p>
+                    Batata frita crocante acompanhada de molho
+                    especial da casa.
+                </p>
+
+                <p class="preco">
+                    R$ 14,90
+                </p>
+
+                <button class="btn-comprar">
+                    Pedir agora
+                </button>
+
+            </div>
+
+
+            <!-- PRODUTO 6 -->
+            <div class="produto">
+
+                <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=300&q=80"
+                    alt="Combo Brasa">
+
+                <h3>
+                    Combo Brasa
+                </h3>
+
+                <p>
+                    Hambúrguer clássico, batata crocante
+                    e refrigerante gelado.
+                </p>
+
+                <p class="preco">
+                    R$ 39,90
+                </p>
+
+                <button class="btn-comprar">
+                    Pedir agora
+                </button>
+
+            </div>
+
+
+            <!-- PRODUTO 7 -->
+            <div class="produto">
+
+                <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=300&q=80"
+                    alt="Hambúrguer de frango">
+
+                <h3>
+                    Chicken Crispy
+                </h3>
+
+                <p>
+                    Frango crocante, queijo, alface e molho
+                    especial da casa.
+                </p>
+
+                <p class="preco">
+                    R$ 27,90
+                </p>
+
+                <button class="btn-comprar">
+                    Pedir agora
+                </button>
+
+            </div>
+
+
+            <!-- PRODUTO 8 -->
+            <div class="produto">
+
+                <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=300&q=80"
+                    alt="Milkshake de chocolate">
+
+                <h3>
+                    Milkshake Chocolate
+                </h3>
+
+                <p>
+                    Milkshake cremoso de chocolate com cobertura especial.
+                </p>
+
+                <p class="preco">
+                    R$ 16,90
+                </p>
+
+                <button class="btn-comprar">
+                    Pedir agora
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    </div>
+
+    </section>
+
+    <!-- PAGAMENTO -->
+    <section class="pagamento">
+
+        <h2>💳 Finalize seu pedido</h2>
+
+        <p class="subtitulo">
+            Escolha a forma de pagamento que preferir
+        </p>
+
+        <div class="pagamento-container">
+
+            <!-- PIX -->
+            <div class="forma-pagamento">
+
+                <div class="pagamento-icone">
+                    📱
+                </div>
+
+                <h3>PIX</h3>
+
+                <p>
+                    Pague de forma rápida e segura pelo PIX.
+                </p>
+
+                <button class="btn-pagamento">
+                    Pagar com PIX
+                </button>
+
+            </div>
+
+
+            <!-- CARTÃO -->
+            <div class="forma-pagamento">
+
+                <div class="pagamento-icone">
+                    💳
+                </div>
+
+                <h3>Cartão</h3>
+
+                <p>
+                    Aceitamos cartões de crédito e débito.
+                </p>
+
+                <button class="btn-pagamento">
+                    Pagar com cartão
+                </button>
+
+            </div>
+
+
+            <!-- DINHEIRO -->
+            <div class="forma-pagamento">
+
+                <div class="pagamento-icone">
+                    💵
+                </div>
+
+                <h3>Dinheiro</h3>
+
+                <p>
+                    Pague em dinheiro na entrega do seu pedido.
+                </p>
+
+                <button class="btn-pagamento">
+                    Pagar em dinheiro
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
